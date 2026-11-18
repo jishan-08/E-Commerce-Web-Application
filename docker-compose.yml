@@ -1,0 +1,8 @@
+services:
+  storefront:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    ports:
+      - "${STORE_FRONTEND_PORT:-8080}:80"
+    restart: unless-stopped
